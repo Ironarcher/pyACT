@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #imports are declared here
 import sys
 
