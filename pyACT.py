@@ -1,5 +1,6 @@
 #imports are declared here
 import sys
+import msvcrt as m
 
 def calculate(englishraw, mathraw, readingraw, scienceraw, writingraw):
 	#Correction factors: English=-2, math=+1, reading=+2, science==1.5
@@ -125,6 +126,12 @@ def main():
 		print('\nPure composite score: ' + str(finalscore))
 		simplescore = round(finalscore, 0)
 		print('Actual composite score: ' + str(simplescore))
+		print('\nPress any key to restart the program and press ESC to exit')
+		userinput = m.getch()
+		if userinput == chr(27).encode():
+			sys.exit()
+		else:
+			main()
 
 if __name__ == "__main__":
 	main()
